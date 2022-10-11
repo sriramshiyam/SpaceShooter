@@ -9,6 +9,14 @@ body {
   cursor: none;
 }
 
+h1 {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  top: 3vh;
+  right: 5vw;
+  font-family: sans-serif;
+}
 .spaceship {
   position: absolute;
   bottom: 5vh;
