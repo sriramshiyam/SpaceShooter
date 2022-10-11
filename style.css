@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url(images/spacebg.webp);
+  background-size: 100%;
+  transition: all 0.15s;
+  overflow: hidden;
+  background-position: 0 0;
+  cursor: none;
+}
+
+.spaceship {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: scale(3.25);
+  transition: all 0.15s;
+}
+
+.rocket {
+  background-image: url(images/rocket.png);
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 13vh;
+  transform: scale(1.5) translateX(-15%);
+  transition: all 0.2s;
+  visibility: visible;
+}
+
+.enemy {
+  position: absolute;
+  background-image: url(images/enemy.png);
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 90vh;
+  transition: all 0.2s;
+  transform: scale(1.6);
+}
