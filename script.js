@@ -134,7 +134,7 @@ function game() {
                     .filter((e) => "-0123456789".split("").includes(e))
                     .join("")
                 );
-                let n = Math.abs(x1 - x2) <= 5 && Math.abs(y1 - y2) == 0;
+                let n = Math.abs(x1 - x2) <= 4 && Math.abs(y1 - y2) == 0;
                 if (n && enemy.style.visibility !== "hidden") {
                   spaceship.style.visibility = "hidden";
                   music.pause();
