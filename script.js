@@ -2,6 +2,7 @@ function game() {
   let body = document.querySelector("body");
   let spaceship = document.querySelector(".spaceship");
   let music = document.getElementById("music");
+  let score = 0;
 
   let dead = false;
   let played = false;
@@ -73,6 +74,8 @@ function game() {
           console.log("Sdadas");
           e.style.visibility = "hidden";
           body.removeChild(R);
+          score++;
+          document.querySelector("h1").innerText = "Score " + score;
           clearInterval(rocketMoving[R.getAttribute("i")]);
         }
       }
@@ -134,7 +137,7 @@ function game() {
                     .filter((e) => "-0123456789".split("").includes(e))
                     .join("")
                 );
-                let n = Math.abs(x1 - x2) <= 4 && Math.abs(y1 - y2) == 0;
+                let n = Math.abs(x1 - x2) <= 5 && Math.abs(y1 - y2) == 0;
                 if (n && enemy.style.visibility !== "hidden") {
                   spaceship.style.visibility = "hidden";
                   music.pause();
@@ -211,9 +214,11 @@ function game() {
       }, 200);
 
       if (e.code === "Space") {
-        let shoot = document.createElement("audio");
-        shoot.src = "sounds/shot.wav";
-        shoot.play();
+        if (!dead) {
+          let shoot = document.createElement("audio");
+          shoot.src = "sounds/shot.wav";
+          shoot.play();
+        }
         let rocket = document.createElement("div");
         rocket.className = "rocket";
         rocket.style.left = spaceship.style.left;
