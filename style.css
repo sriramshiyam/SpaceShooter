@@ -34,7 +34,7 @@ h1 {
   background-repeat: no-repeat;
   position: absolute;
   bottom: 13vh;
-  transform: scale(1.5) translateX(-15%);
+  transform: scale(1.5) translateX(5%);
   transition: all 0.2s;
   visibility: visible;
 }
